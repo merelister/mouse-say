@@ -1,3 +1,4 @@
+#!/usr/bin/env
 read -p "What does the mouse say? " mouse
 length=${#mouse}
 length=$((length+4))
