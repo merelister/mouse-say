@@ -1,0 +1,47 @@
+read -p "What does the mouse say? " mouse
+length=${#mouse}
+length=$((length+4))
+
+#print top of signboard
+printf "  "
+for (( c=1; c<=length; c++ ))
+do
+	printf "_"
+done
+#new line
+echo ""
+
+#print sides of signboard
+for a in 1 2 3 4 ;
+do
+#print text in middle of signboard
+if [[ $a = 3 ]]; then
+	echo "||  $mouse  ||"
+else
+	printf "||";
+	for (( d=1; d<=length; d++ ));
+	do
+		printf " ";
+	done;
+printf "||\n"
+fi
+done;
+
+#print bottom of signboard
+printf "||"
+for (( f=1; f<=length; f++ ))
+do
+	printf "_"
+done;
+printf "||"
+
+#print mouse
+printf "
+  
+   /\______/\  
+   \/      \/  
+   | 0   0 |   
+  ---- o  ----
+ ===== _ =====
+   \_______/
+"
